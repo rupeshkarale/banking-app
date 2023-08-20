@@ -1,0 +1,25 @@
+.accountpage{
+     width: 100%;
+}
+.detail-btn{
+     background-color:rgb(94, 94, 239);
+     border-radius: 10px;
+     border:none;
+     color:white;
+     cursor: pointer;
+     width: fit-content;
+     padding:5px 10px;
+}
+.detail-btn:hover{
+     transform: scale(1.1);
+}
+
+
+@media only screen and (max-width: 950px){
+     .detail-btn{
+       
+        font-size: 12px;
+          width: fit-content;
+          padding:5px 10px;
+     }
+}

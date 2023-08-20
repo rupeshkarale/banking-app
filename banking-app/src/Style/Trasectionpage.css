@@ -1,0 +1,69 @@
+.transectionpage{
+     width: 100%;
+}
+.listbox{
+     width: 95%;
+     margin: auto;
+     padding-top: 80px;
+}
+.listhead{
+     width: 100%;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+}
+.listhead div:first-child{
+     width: auto;
+     display: flex;
+     align-items: center; 
+}
+.btn-box{
+     width: 200px;
+     display:flex;
+     justify-content: space-between;
+     align-items: center;
+     
+}
+.deposit-btn{
+     font-size: 18px;
+     background-color: #7721f9;
+     color:white;
+     border:none;
+     padding:5px 10px;
+     border-radius: 10px;
+     cursor:pointer
+}
+.deposit-btn:hover{
+   transform: scale(1.1);
+}
+.withdraw-btn{
+     font-size: 18px;
+     background-color: #7721f9;
+     color:white;
+     border:none;
+     padding:5px 10px;
+     border-radius: 10px;
+     cursor:pointer
+}
+.withdraw-btn:hover{
+     transform: scale(1.1);
+ 
+}
+
+@media only screen and (max-width: 425px){
+     .listhead{
+          flex-direction: column-reverse;
+     }
+     .listhead div:first-child{
+          width: 100%;
+          margin: auto;
+          margin-top: 10px;
+
+          border-top: 1px solid black;
+     }
+     .btn-box{
+          width: 95%;
+          margin: auto;
+          margin-top: 10px;
+     }
+}

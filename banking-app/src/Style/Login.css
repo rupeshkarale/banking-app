@@ -1,0 +1,52 @@
+.login-box{
+     width: 100%;
+     height: 700px;
+     background-color:#7721f9;
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+   
+}
+.loginform-box{
+     width: 400px;
+     height:400px;
+     padding:20px;
+     margin: auto;
+     background-color: white;
+}
+
+.loginform-box-active{
+     width: 400px;
+     height:400px;
+     padding:20px;
+     margin: auto;
+     background-color: white;
+     filter:blur(10px)
+}
+.custom-loader {
+     width: 50px;
+     height: 50px;
+     border-radius: 50%;
+     background: 
+       radial-gradient(farthest-side,#766DF4 94%,#0000) top/8px 8px no-repeat,
+       conic-gradient(#0000 30%,#766DF4);
+     -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 8px),#000 0);
+     animation:s3 1s infinite linear;
+   }
+   
+   @keyframes s3{ 
+     100%{transform: rotate(1turn)}
+   }
+
+@media only screen and (max-width: 1200px){
+     .loginform-box{
+          width: 90%;
+          margin:auto;
+     }
+     .loginform-box-active{
+          width: 90%;
+          margin:auto;
+     }
+    
+ }
+
