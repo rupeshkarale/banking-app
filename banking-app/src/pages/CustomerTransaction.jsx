@@ -56,10 +56,9 @@ function CustomerTransaction() {
     dispatch(getSingleProfile(accessToken, userId));
   }, [accessToken]);
 
-  // Define your custom theme with dark background, custom fonts, and colors
   const theme = extendTheme({
     config: {
-      initialColorMode: "dark", // Set the initial color mode to dark
+      initialColorMode: "dark",
     },
     fonts: {
       heading: "Poppins, sans-serif",
@@ -101,15 +100,12 @@ function CustomerTransaction() {
             <Heading as="h1" size="xl">
               Welcome, {profile.name}!
             </Heading>
-            <HStack spacing={4}>
+            <HStack spacing={4} mr="10">
               {profile.balance !== undefined && (
                 <Text fontSize="lg" color="gray.300">
-                  Balance: ${profile.balance.toFixed(2)}
+                  Balance: ${profile.balance}
                 </Text>
               )}
-              <Button colorScheme="secondary" onClick={() => setMessage("")}>
-                Logout
-              </Button>
             </HStack>
           </HStack>
 
@@ -148,9 +144,9 @@ function CustomerTransaction() {
                     }
                   >
                     <Td>
-                      <Text>${transaction.actionamount.toFixed(2)}</Text>
+                      <Text>${transaction.actionamount}</Text>
                     </Td>
-                    <Td>${transaction.balance.toFixed(2)}</Td>
+                    <Td>${transaction.balance}</Td>
                     <Td>
                       {new Date(transaction.date).toLocaleString(undefined, {
                         weekday: "long",

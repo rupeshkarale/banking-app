@@ -39,7 +39,7 @@ const AllTransaction = () => {
     } catch (error) {
       console.error(error);
       alert("Authentication failed. Please log in again.");
-      navigate('/')
+      navigate("/");
     }
   };
 
@@ -76,16 +76,20 @@ const AllTransaction = () => {
         >
           <Thead>
             <Tr>
+              <Th>Sr.No</Th>
               <Th>Customer Name</Th>
               <Th>Balance</Th>
+              <Th>Email</Th>
               <Th>Actions</Th>
             </Tr>
           </Thead>
           <Tbody>
-            {transactions.map((account) => (
+            {transactions.map((account, index) => (
               <Tr key={account._id}>
+                <Td>{index + 1}</Td>
                 <Td>{account.name}</Td>
-                <Td>${account.balance.toFixed(2)}</Td>
+                <Td>${account.balance}</Td>
+                <Td>${account.email}</Td>
                 <Td>
                   <Button
                     colorScheme="teal"
@@ -100,9 +104,6 @@ const AllTransaction = () => {
         </Table>
       )}
       <Divider mt={4} />
-      <Text mt={4} fontSize="sm" textAlign="center">
-        Footer Text Here
-      </Text>
     </Box>
   );
 };

@@ -74,7 +74,7 @@ function Transactions({ username }) {
   // Define your custom theme with dark background, custom fonts, and colors
   const theme = extendTheme({
     config: {
-      initialColorMode: "dark", // Set the initial color mode to dark
+      initialColorMode: "light", // Set the initial color mode to dark
     },
     fonts: {
       heading: "Poppins, sans-serif",
@@ -135,7 +135,7 @@ function Transactions({ username }) {
         balance: newamount,
       };
       console.log(accessToken);
-      axios.patch(`${url}/user/updateprofile`, payload, {
+      await axios.patch(`${url}/user/updateprofile`, payload, {
         headers: {
           Accept: "application/json",
           "Content-Type": "application/json;charset=UTF-8",
@@ -181,7 +181,7 @@ function Transactions({ username }) {
     };
 
     try {
-      axios.patch(`${url}/user/updateprofile`, payload, {
+      await axios.patch(`${url}/user/updateprofile`, payload, {
         headers: {
           Accept: "application/json",
           "Content-Type": "application/json;charset=UTF-8",
