@@ -4,11 +4,9 @@ import * as types from "./actionTypes"
 
 
 const initialState = {
-
   data: {},
   isLoading: false,
   isError: false,
-
 };
 
 const reducer = (state = initialState, action) => {
@@ -33,14 +31,6 @@ const reducer = (state = initialState, action) => {
         isLoading: false,
         data: {},
         isError: true
-      }
-
-    case types.LOG_OUT:
-      return {
-        ...state,
-        isLoading: false,
-        data: {},
-        isError: false
       }
 
     default: return state;

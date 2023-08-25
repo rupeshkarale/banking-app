@@ -89,7 +89,7 @@ const AllTransaction = () => {
                 <Td>{index + 1}</Td>
                 <Td>{account.name}</Td>
                 <Td>${account.balance}</Td>
-                <Td>${account.email}</Td>
+                <Td>{account.email}</Td>
                 <Td>
                   <Button
                     colorScheme="teal"
